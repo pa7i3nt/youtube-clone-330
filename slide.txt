@@ -1,0 +1,16 @@
+Slide 1: (Title) YouTube clone with ReactJS
+Slide 2: Hình ảnh tổng quan: LandingPage (Desktop View + Mobile View)
+Slide 3: Hình ảnh tổng quan: SearchPage (Desktop View + Mobile View)
+Slide 4: ChipsBar (dùng regionCode chứ không phải keyword, bởi vì keyword tốn 100 quota, regionCode tốn 1 quota), free user có 10000 quota mỗi ngày
+Slide 5: ChipsBar (Desktop View + Mobile View)
+Slide 6: Footer
+- Desktop View: Khi chạm breakpoint, sidebar sẽ thu nhỏ về Footer
+- Mobile View: Trở thành Footer
+Slide 7: Header chia thành 3 phần chính: LeftContainer, MiddleContainer, RightContainer
+Slide 8: LeftContainer: YouTube Logo và HamburgerMenuIcon
+Slide 9: MiddleContainer: SearchBar, SearchButton, MicButton
+Slide 10: RightContainer:
+- AppsButton
+- AvatarButton
+- CreateVideoButton
+- NotificationsButton

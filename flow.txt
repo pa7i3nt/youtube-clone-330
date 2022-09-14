@@ -1,0 +1,46 @@
+(TODO: Chụp ảnh màn hình tương + khoanh đỏ các phần tương ứng cho mỗi phần, sử dụng Paint)
+Main: ChipsBar, LandingPage, SearchPage, SidebarToShow, ScrollToTop
+
+1. ChipsBar
+- HideOnScroll (if Mobile)
+- Chips
+
+2. ScrollToTop: Scroll to top if pathname, searchTerm and country chip has changed
+- searchTerm: gõ keyword để tìm kiếm
+- pathname: khi dùng searchTerm để tìm kiếm, đường dẫn sẽ thay đổi
+- country chip: khi chuyen country chip index se ScrollToTop cua trang LandingPage
+khi chuyển country chip, index sẽ thay đổi => ScrollToTop LandingPage
+
+3. LandingPage
+Các item được display dạng grid (GridItem) gồm
+- VideoCard
+- VideoSkeleton
+
+4. SearchPage
+- SearchContainer (Sử dụng OuterVideoContainer của LandingPage) (khi thuyết trình, chỉnh từng screen để thấy sự khác biệt, sự khác biệt giữa các breakpoint)
+- FilterButton
+- ResultsVideoCard:
+  + ChannelImage
+  + VideoThumbnail (có gắn kèm DurationContainer)
+  + MobileChannelContent (thông tin kênh trả về), MobileVideoContent (thông tin video trả về) đều có sử dụng SearchCardHeader
+  + ChannelSubscribeButton
+  + DesktopChannelContent, DesktopVideoContent (đều có sử dụng ContentContainer)
+
+5. SidebarToShow: Check neu width < breakpoint => show MiniSideBar (footerIcon, using in Mobile version)
+or FullWidthSidebar (> breakpoint)
+- MiniSideBar: MiniSidebarIcons
+NOTE: Các item của sidebar đều được bọc bởi SidebarRow
+- FullWidthSidebar: SidebarFirstPart, SidebarSecondPart, SidebarThirdPart
+  + SidebarFirstPart: SidebarTopMenuSection1, SidebarTopMenuSection2, SidebarTopMenuSection3, ShowMoreButton, ShowLessButton, DividerWidth (import from FullWidthSidebar, đặt ở cuối FirstPart để ngăn cách với SecondPart)
+  + SidebarSecondPart: ShowMoreButton, ShowLessButton, SubHeading (tiêu đề của từng mục như SUBSCRIPTIONS,...)
+  + SidebarThirdPart: SubHeading (tiêu đề MORE FROM YOUTUBE), MoreFromYoutubeSection1, MoreFromYoutubeSection2, DividerWidth (đặt ở đầu ThirdPart để ngăn cách với SecondPart)
+- StyledCardHeader: video's details (channelImage, duration, views,...)
+-------------------
+max width => 1313px
+sidebar: full, no collapse
+search bar: full (with "Search" text placeholder, search button)
+----
+1312px => 
+sidebar: collapsed, switch to Drawer mode
+có 2 mode: mini side bar và full width sidebar
+search bar: full (with "Search" text placeholder, search button)
